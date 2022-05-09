@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>loadmapasyncHTML</title>
+    <link rel="stylesheet" href="map.css">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=Ap_sPVyGSb5CiUWhf-roRRNhqMSu6dKR4SUGYM4QGkbKc6O693s6cBSpcQ_h2LwY'></script>
+    <script src="map.js"></script>
+</head>
+<body onload='LoadMap(), GeoLocate();'> 
+    
+    <form>
+        <input type="text" placeholder="Nearby Interests..." list="POI" id="PointsOfInterest">
+        <datalist id="POI">
+            <option value="Restaurant">
+            <option value="Fast Food">
+            <option value="Gas Station">
+            <option value="Coffee Shop">
+            <option value="Hotel">
+            <option value="Mall">
+            <option value="Grocery Store">
+            <option value="Bank">
+            <option value="Pharmacy">
+        </datalist>
+        <button type="button" onclick="GetNearbyEntities()">Search</button>
+    </form>
+    <div id="searchBoxContainer" onmousedown="QuickSearch();"><input type= 'text' placeholder="Search Bar..." id= 'searchBox'/></div>
+    <p id="lattitude"></p>
+    <p id="longitude"></p>
+    <button id="get-directions" onclick="GetDirections();">Get Directions</button>
+    <button id="draw-polygon" onclick="DrawPolygon();">Set Polygon Rings</button>
+    <button id="log-visit" onclick="LogVisit();">Log Visit</button>
+    <div id='printoutPanel'></div>
+    <div id='directionsInputContainer'></div>
+    <label for="Entitie lookup results">Results</label>
+    <textarea disabled id="PoiList" name="PoiList" rows="4" cols="80"></textarea>
+    <div id='myMap' style='width: 100vw; height: 100vh;'></div>
+
+</body>
+</html>

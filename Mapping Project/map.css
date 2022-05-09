@@ -1,0 +1,27 @@
+﻿
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI',Helvetica,Arial,Sans-Serif
+}
+
+button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 12px;
+}
+
+.printoutPanel{
+    align-self:center;
+}
+
+.searchBoxContainer{
+
+    align-self: stretch;
+}
